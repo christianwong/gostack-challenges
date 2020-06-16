@@ -49,7 +49,7 @@ app.put("/repositories/:id", (request, response) => {
 
   repositories[repoIdx] = repo
 
-  return response.status(204).send()
+  return response.json(repo)
 });
 
 app.delete("/repositories/:id", (request, response) => {
