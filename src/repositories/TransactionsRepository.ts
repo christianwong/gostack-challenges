@@ -6,7 +6,7 @@ interface Balance {
   total: number;
 }
 
-interface TransactionDTO {
+interface CreateTransactionDTO {
   title: string;
   value: number;
   type: 'income' | 'outcome';
@@ -27,12 +27,13 @@ class TransactionsRepository {
     const { income, outcome } = this.transactions
       .map(transaction =>
         transaction.type === 'income'
-          ? { income: transaction.value, outcome: 0 }
-          : { income: 0, outcome: transaction.value },
+          ? { income: transaction.value }
+          : { outcome: transaction.value },
       )
-      .reduce((acc, cur) => ({
-          income: acc.income + cur.income,
-          outcome: acc.outcome + cur.outcome,
+      .reduce(
+        (acc, cur) => ({
+          income: acc.income + (cur.income || 0),
+          outcome: acc.outcome + (cur.outcome || 0),
         }),
         { income: 0, outcome: 0 },
       );
@@ -41,11 +42,11 @@ class TransactionsRepository {
     return balance;
   }
 
-  public create({ title, value, type }: TransactionDTO): Transaction {
+  public create({ title, value, type }: CreateTransactionDTO): Transaction {
     const transaction = new Transaction({ title, value, type });
 
     const balance = this.getBalance();
-    if (type === 'outcome' && value >= balance.total) {
+    if (type === 'outcome' && value > balance.total) {
       throw Error("you don't have all that money!");
     }
 
