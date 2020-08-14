@@ -1,0 +1,243 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2020-06-16T22:53:26.328Z",
+    "__export_source": "insomnia.desktop.app:v2020.2.2",
+    "resources": [
+        {
+            "_id": "req_f6b408b76af04eda9b83a37991c90519",
+            "authentication": {},
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Desafio Node.js\",\n\t\"url\": \"http://github.com/...\",\n\t\"techs\": [\n\t\t\"Node.js\",\n\t\t\"Express.js\",\n\t\t\"UUID.js\",\n\t\t\"...\"\n\t]\n}"
+            },
+            "created": 1592345597405,
+            "description": "",
+            "headers": [
+                {
+                    "id": "pair_969f0de9dac24dd5bdda8d9e1b36969c",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "isPrivate": false,
+            "metaSortKey": -1592345622329,
+            "method": "POST",
+            "modified": 1592347845175,
+            "name": "Create",
+            "parameters": [],
+            "parentId": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "{{ url  }}/{{ resource  }}",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "created": 1592345562973,
+            "description": "",
+            "environment": {
+                "first": "{% response 'body', 'req_b10678c6f32541139f907b67d9fa8cb5', 'b64::JFswXS5pZA==::46b', 'no-history' %}",
+                "like": "like",
+                "resource": "repositories"
+            },
+            "environmentPropertyOrder": {
+                "&": [
+                    "resource",
+                    "first",
+                    "like"
+                ]
+            },
+            "metaSortKey": -1592345562973,
+            "modified": 1592347267129,
+            "name": "Repositories",
+            "parentId": "wrk_ccde3fd941f74eb6b9476e9201c9fb2d",
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_ccde3fd941f74eb6b9476e9201c9fb2d",
+            "created": 1592345471265,
+            "description": "",
+            "modified": 1592345471265,
+            "name": "gostack-conceitos-nodejs-insomnia",
+            "parentId": null,
+            "scope": null,
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_b10678c6f32541139f907b67d9fa8cb5",
+            "authentication": {},
+            "body": {},
+            "created": 1592345622279,
+            "description": "",
+            "headers": [],
+            "isPrivate": false,
+            "metaSortKey": -1592345622279,
+            "method": "GET",
+            "modified": 1592345770726,
+            "name": "List",
+            "parameters": [],
+            "parentId": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "{{ url  }}/{{ resource  }}",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c5c53445a8af4ed8b510d69b403a5b67",
+            "authentication": {},
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Desafio REACT.js\",\n\t\"url\": \"http://github.com/.../react\",\n\t\"techs\": [\n\t\t\"REACT JS\"\n\t]\n}"
+            },
+            "created": 1592345639086,
+            "description": "",
+            "headers": [
+                {
+                    "id": "pair_f903963efe2f4f04bec96db323f3e551",
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "isPrivate": false,
+            "metaSortKey": -1592345597380,
+            "method": "PUT",
+            "modified": 1592347769054,
+            "name": "Update",
+            "parameters": [],
+            "parentId": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "{{ url  }}/{{ resource  }}/{{ first  }}",
+            "_type": "request"
+        },
+        {
+            "_id": "req_80ba2a41393144dbb09ac8fba70f7e50",
+            "authentication": {},
+            "body": {},
+            "created": 1592345650314,
+            "description": "",
+            "headers": [],
+            "isPrivate": false,
+            "metaSortKey": -1592345597355,
+            "method": "DELETE",
+            "modified": 1592346079268,
+            "name": "Remove",
+            "parameters": [],
+            "parentId": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "{{ url  }}/{{ resource  }}/{{ first  }}",
+            "_type": "request"
+        },
+        {
+            "_id": "req_8e694a5d41814b55a073ef160d18bdda",
+            "authentication": {},
+            "body": {},
+            "created": 1592345721391,
+            "description": "",
+            "headers": [],
+            "isPrivate": false,
+            "metaSortKey": -1592345597305,
+            "method": "POST",
+            "modified": 1592346074901,
+            "name": "Like",
+            "parameters": [],
+            "parentId": "fld_221e2f6ef99245ae9b938fa09ee6539d",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "{{ url  }}/{{ resource  }}/{{ first  }}/{{ like  }}",
+            "_type": "request"
+        },
+        {
+            "_id": "env_5024666cec1dee53ba6318eb0b51fa94d60f57bf",
+            "color": null,
+            "created": 1592345471503,
+            "data": {},
+            "dataPropertyOrder": null,
+            "isPrivate": false,
+            "metaSortKey": 1592345471503,
+            "modified": 1592345471503,
+            "name": "Base Environment",
+            "parentId": "wrk_ccde3fd941f74eb6b9476e9201c9fb2d",
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_5024666cec1dee53ba6318eb0b51fa94d60f57bf",
+            "cookies": [],
+            "created": 1592345471506,
+            "modified": 1592345471506,
+            "name": "Default Jar",
+            "parentId": "wrk_ccde3fd941f74eb6b9476e9201c9fb2d",
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_aca6593a541e4bb182146498ae8028ba",
+            "contentType": "yaml",
+            "contents": "",
+            "created": 1592345471271,
+            "fileName": "gostack-conceitos-nodejs-insomnia",
+            "modified": 1592345471271,
+            "parentId": "wrk_ccde3fd941f74eb6b9476e9201c9fb2d",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_cb8464c59e6e430982f86f500bc8479b",
+            "color": "#8b2bcb",
+            "created": 1592345480572,
+            "data": {
+                "url": "http://localhost:3333"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "url"
+                ]
+            },
+            "isPrivate": false,
+            "metaSortKey": 1592345480572,
+            "modified": 1592345545682,
+            "name": "Development",
+            "parentId": "env_5024666cec1dee53ba6318eb0b51fa94d60f57bf",
+            "_type": "environment"
+        },
+        {
+            "_id": "env_e93cc6a319034ad094cd56889f37d272",
+            "color": "#24cb46",
+            "created": 1592345517430,
+            "data": {
+                "url": "http://api.christianwong.com"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "url"
+                ]
+            },
+            "isPrivate": false,
+            "metaSortKey": 1592345480622,
+            "modified": 1592345539623,
+            "name": "Production",
+            "parentId": "env_5024666cec1dee53ba6318eb0b51fa94d60f57bf",
+            "_type": "environment"
+        }
+    ]
+}
